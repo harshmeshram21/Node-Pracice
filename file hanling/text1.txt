@@ -1,0 +1,7 @@
+Hello, how are you
+This line is added synchronously.
+This line is added synchronously.
+This line is added synchronously.
+This line is added synchronously.
+This line is added synchronously.
+This line is added synchronously.
