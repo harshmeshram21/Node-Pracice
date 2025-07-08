@@ -7,6 +7,10 @@ const filePath = path.join(__dirname, 'logFile.txt');
 
 // Create the server
 const myServer = http.createServer((req, res) => {
+
+
+    if(req.url==="/favicon.ico") return res.end()
+
     const log =`[${new Date().toLocaleString()}] ${req.method} ${req.url}`;
    fs.appendFile(filePath, log + '\n', (err) => {
       if (err) {
@@ -15,7 +19,7 @@ const myServer = http.createServer((req, res) => {
    });
 
   const route = req.url;
-  // multi routes
+  // multi routes 
   switch (route) {
     case '/':
       res.end('<h1>Welcome to Home Page</h1>');
